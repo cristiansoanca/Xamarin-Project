@@ -7,9 +7,11 @@
              BackgroundColor="Black">
 
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center"
+        <ScrollView>
+
+            <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Center" >
-            <Button
+                <Button
                     Command="{Binding SaveResultsClicked}"
                     Clicked="Button_Clicked"
                     FontSize="Small" FontAttributes="Bold"
@@ -17,7 +19,7 @@
                     BackgroundColor="Gray"
                     Text="Save Results" />
 
-            <Label 
+                <Label 
                        WidthRequest="215"
                        Text="{Binding CurrentGame}"
                        HeightRequest="40"
@@ -29,10 +31,10 @@
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
 
-            <StackLayout Orientation="Horizontal" 
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                        WidthRequest="150"
                        Text="{Binding Player1}"
                        HeightRequest="40"
@@ -43,7 +45,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player1Input}"
                        HeightRequest="40"
                        WidthRequest="60"
@@ -52,11 +54,11 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                     WidthRequest="150"
                        Text="{Binding Player2}"
                        HeightRequest="40"
@@ -67,7 +69,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player2Input}"
                        HeightRequest="40"
                        WidthRequest="60"
@@ -76,11 +78,11 @@
                        BackgroundColor="White"
                        HorizontalTextAlignment="Center"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                        WidthRequest="150"
                        Text="{Binding Player3}"
                        HeightRequest="40"
@@ -91,7 +93,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player3Input}"
                        HeightRequest="40"
                        WidthRequest="60"
@@ -100,11 +102,11 @@
                        BackgroundColor="White"
                        HorizontalTextAlignment="Center"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                     WidthRequest="150"
                        Text="{Binding Player4}"
                        HeightRequest="40"
@@ -115,7 +117,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player4Input}"
                        HeightRequest="40"
                        WidthRequest="60"
@@ -124,11 +126,11 @@
                        BackgroundColor="White"
                        HorizontalTextAlignment="Center"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                        WidthRequest="150"
                        IsVisible="{Binding HiddenPlayer5}"
                        Text="{Binding Player5}"
@@ -140,7 +142,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player5Input}"
                        HeightRequest="40"
                        WidthRequest="60"
@@ -150,11 +152,11 @@
                        BackgroundColor="White"
                        HorizontalTextAlignment="Center"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                     WidthRequest="150"
                        IsVisible="{Binding HiddenPlayer6}"
                        Text="{Binding Player6}"
@@ -166,7 +168,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player6Input}"
                        HeightRequest="40"
                        WidthRequest="60"
@@ -176,12 +178,9 @@
                        BackgroundColor="White"
                        HorizontalTextAlignment="Center"
                        Keyboard="Numeric" />
+                </StackLayout>
             </StackLayout>
-
-
-
-
-        </StackLayout>
+        </ScrollView>
 
     </ContentPage.Content>
 </ContentPage>

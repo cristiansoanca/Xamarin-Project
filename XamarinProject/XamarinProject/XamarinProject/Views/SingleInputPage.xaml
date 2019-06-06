@@ -7,9 +7,11 @@
              BackgroundColor="Black">
 
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center"
+        <ScrollView>
+
+            <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Center" >
-            <Button
+                <Button
                     Command="{Binding SaveResultsClicked}"
                     Clicked="Button_Clicked"
                     FontSize="Small" FontAttributes="Bold"
@@ -17,7 +19,7 @@
                     BackgroundColor="Gray"
                     Text="Save Results" />
 
-            <Label 
+                <Label 
                     Text="{Binding CurrentGame}"
                     BackgroundColor="DarkGray"  
                     HorizontalTextAlignment="Center"
@@ -25,10 +27,10 @@
                     VerticalTextAlignment="Center" 
                     Margin="1"/>
 
-            <StackLayout Orientation="Horizontal" 
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                        WidthRequest="100"
                        Text="{Binding Player1}"
                        HeightRequest="40"
@@ -39,17 +41,17 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player1Input}"
+                    <Switch IsToggled="{Binding Player1Input}"
                         BackgroundColor="White"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
                         
                         Toggled="Switch1_Toggled"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                     WidthRequest="100"
                        Text="{Binding Player2}"
                        HeightRequest="40"
@@ -60,16 +62,16 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player2Input}"
+                    <Switch IsToggled="{Binding Player2Input}"
                         BackgroundColor="White"
                         HorizontalOptions="CenterAndExpand"
                        VerticalOptions="CenterAndExpand"
                         Toggled="Switch2_Toggled"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                        WidthRequest="100"
                        Text="{Binding Player3}"
                        HeightRequest="40"
@@ -80,16 +82,16 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player3Input}"
+                    <Switch IsToggled="{Binding Player3Input}"
                         BackgroundColor="White"
                         HorizontalOptions="CenterAndExpand"
                        VerticalOptions="CenterAndExpand"
                         Toggled="Switch3_Toggled"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                     WidthRequest="100"
                        Text="{Binding Player4}"
                        HeightRequest="40"
@@ -100,16 +102,16 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player4Input}"
+                    <Switch IsToggled="{Binding Player4Input}"
                         BackgroundColor="White"
                         HorizontalOptions="CenterAndExpand"
                        VerticalOptions="CenterAndExpand"
                         Toggled="Switch4_Toggled"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                       WidthRequest="100"
                        IsVisible="{Binding HiddenPlayer5}"
                        Text="{Binding Player5}"
@@ -121,17 +123,17 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player5Input}"
+                    <Switch IsToggled="{Binding Player5Input}"
                         IsVisible="{Binding HiddenPlayer5}"
                         BackgroundColor="White"
                         HorizontalOptions="CenterAndExpand"
                        VerticalOptions="CenterAndExpand"
                         Toggled="Switch5_Toggled"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                     WidthRequest="100"
                        IsVisible="{Binding HiddenPlayer6}"
                        Text="{Binding Player6}"
@@ -143,18 +145,19 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player6Input}"
+                    <Switch IsToggled="{Binding Player6Input}"
                         IsVisible="{Binding HiddenPlayer6}"
                         HorizontalOptions="CenterAndExpand"
                        VerticalOptions="CenterAndExpand"
                         BackgroundColor="White"
                         Toggled="Switch6_Toggled"/>
+                </StackLayout>
+
+
+
+
             </StackLayout>
-
-
-
-
-        </StackLayout>
+        </ScrollView>
 
     </ContentPage.Content>
 </ContentPage>

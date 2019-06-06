@@ -7,9 +7,11 @@
              BackgroundColor="Black">
 
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center"
+        <ScrollView>
+
+            <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Center" >
-            <Button
+                <Button
                     Command="{Binding SaveResultsClicked}"
                     Clicked="Button_Clicked"
                     FontSize="Small" FontAttributes="Bold"
@@ -17,10 +19,10 @@
                     BackgroundColor="Gray"
                     Text="Save Results" />
 
-            <StackLayout Orientation="Horizontal" 
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center">
-                <Label 
+                    <Label 
                        WidthRequest="98.5"
                        Text="{Binding CurrentGame}"
                        HeightRequest="40"
@@ -31,7 +33,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Label 
+                    <Label 
                        WidthRequest="43.5"
                        Text="K"
                        HeightRequest="40"
@@ -42,7 +44,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Label 
+                    <Label 
                        WidthRequest="98.5"
                        Text="Queens"
                        HeightRequest="40"
@@ -53,7 +55,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Label 
+                    <Label 
                        WidthRequest="98.5"
                        Text="Diamonds"
                        HeightRequest="40"
@@ -64,7 +66,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Label 
+                    <Label 
                        WidthRequest="98.5"
                        Text="Levate"
                        HeightRequest="40"
@@ -76,12 +78,12 @@
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
 
-            </StackLayout>
-            
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                        WidthRequest="100"
                        Text="{Binding Player1}"
                        HeightRequest="40"
@@ -92,14 +94,14 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player1Input}"
+                    <Switch IsToggled="{Binding Player1Input}"
                         BackgroundColor="White"
                         HeightRequest="40"
                         WidthRequest="45"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
                         Toggled="Switch1_Toggled"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player1QInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -108,7 +110,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player1DInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -117,7 +119,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player1LInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -126,11 +128,11 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                     WidthRequest="100"
                        Text="{Binding Player2}"
                        HeightRequest="40"
@@ -141,14 +143,14 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player2Input}"
+                    <Switch IsToggled="{Binding Player2Input}"
                         BackgroundColor="White"
                         WidthRequest="45"
                         HeightRequest="40"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
                         Toggled="Switch2_Toggled"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player2QInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -157,7 +159,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player2DInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -166,7 +168,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player2LInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -175,11 +177,11 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                        WidthRequest="100"
                        Text="{Binding Player3}"
                        HeightRequest="40"
@@ -190,14 +192,14 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player3Input}"
+                    <Switch IsToggled="{Binding Player3Input}"
                         BackgroundColor="White"
                         WidthRequest="45"
                         HeightRequest="40"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
                         Toggled="Switch3_Toggled"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player3QInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -206,7 +208,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player3DInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -215,7 +217,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player3LInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -224,11 +226,11 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                     WidthRequest="100"
                        Text="{Binding Player4}"
                        HeightRequest="40"
@@ -239,14 +241,14 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player4Input}"
+                    <Switch IsToggled="{Binding Player4Input}"
                         BackgroundColor="White"
                         WidthRequest="45"
                         HeightRequest="40"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
                         Toggled="Switch4_Toggled"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player4QInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -255,7 +257,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player4DInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -264,7 +266,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player4LInput}"
                        HeightRequest="40"
                        WidthRequest="100"
@@ -273,11 +275,11 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                       WidthRequest="100"
                        IsVisible="{Binding HiddenPlayer5}"
                        Text="{Binding Player5}"
@@ -289,7 +291,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player5Input}"
+                    <Switch IsToggled="{Binding Player5Input}"
                         IsVisible="{Binding HiddenPlayer5}"
                         BackgroundColor="White"
                         HeightRequest="40"
@@ -297,7 +299,7 @@
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
                         Toggled="Switch5_Toggled"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player5QInput}"
                        IsVisible="{Binding HiddenPlayer5}"
                        HeightRequest="40"
@@ -307,7 +309,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player5DInput}"
                        IsVisible="{Binding HiddenPlayer5}"
                        HeightRequest="40"
@@ -317,7 +319,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player5LInput}"
                        IsVisible="{Binding HiddenPlayer5}"
                        HeightRequest="40"
@@ -327,11 +329,11 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center" >
-                <Label 
+                    <Label 
                     WidthRequest="100"
                        IsVisible="{Binding HiddenPlayer6}"
                        Text="{Binding Player6}"
@@ -343,7 +345,7 @@
                        FontSize="Small" FontAttributes="Bold"
                        VerticalTextAlignment="Center" 
                        Margin="1"/>
-                <Switch IsToggled="{Binding Player6Input}"
+                    <Switch IsToggled="{Binding Player6Input}"
                         IsVisible="{Binding HiddenPlayer6}"
                         WidthRequest="45"
                         HeightRequest="40"
@@ -351,7 +353,7 @@
                         VerticalOptions="CenterAndExpand"
                         BackgroundColor="White"
                         Toggled="Switch6_Toggled"/>
-                <Entry
+                    <Entry
                        Text="{Binding Player6QInput}"
                        IsVisible="{Binding HiddenPlayer6}"
                        HeightRequest="40"
@@ -361,7 +363,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player6DInput}"
                        IsVisible="{Binding HiddenPlayer6}"
                        HeightRequest="40"
@@ -371,7 +373,7 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
-                <Entry
+                    <Entry
                        Text="{Binding Player6LInput}"
                        IsVisible="{Binding HiddenPlayer6}"
                        HeightRequest="40"
@@ -381,13 +383,14 @@
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White"
                        Keyboard="Numeric" />
+                </StackLayout>
+
+
+
+
             </StackLayout>
-
-
-
-
-        </StackLayout>
+        </ScrollView>
 
     </ContentPage.Content>
-  
+
 </ContentPage>
