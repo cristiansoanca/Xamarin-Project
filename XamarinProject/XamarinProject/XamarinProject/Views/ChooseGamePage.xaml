@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XamarinProject.Views.ChooseGamePage"
+             BackgroundColor="Black">
+
+    <ContentPage.Content>
+        
+        <Grid VerticalOptions="FillAndExpand" 
+              HorizontalOptions="FillAndExpand">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            
+            <Button
+                    Command="{Binding TotaleClicked}"
+                    Clicked="TotaleButton_Clicked"
+                    IsVisible="{Binding CurrentPlayerTotaleView}"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Totale"
+                    BackgroundColor="White"
+                    FontSize="Small" FontAttributes="Bold" Margin="1"  
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+            <ImageButton
+                    Command="{Binding KingOfHeartsClicked}"
+                    Source ="{Binding KingOfHeartsSource}"
+                    IsVisible="{Binding CurrentPlayerKingOfHeartsView}"
+                    Clicked="KingOfHeartsButton_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    BackgroundColor="White"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+            <ImageButton
+                    Command="{Binding TenOfClubsClicked}"
+                    Source ="{Binding TenOfClubsSource}"
+                    IsVisible="{Binding CurrentPlayerTenOfClubsView}"                
+                    Clicked="TenOfClubsButton_Clicked"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    BackgroundColor="White"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+            <ImageButton
+                    Command="{Binding QueensClicked}"                
+                    Source ="{Binding QueensSource}"
+                    IsVisible="{Binding CurrentPlayerQueensView}"
+                    Clicked="QueensButton_Clicked"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    BackgroundColor="White"                    
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+            <Button
+                    Command="{Binding DoubleClicked}"
+                    Clicked="DoubleButton_Clicked"
+                    x:Name="doubleButton"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="Double Off"
+                    BackgroundColor="White"                
+                    FontSize="Micro" FontAttributes="Bold" Margin="1"
+                    WidthRequest="110"
+                    HeightRequest="80"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+            <Button
+                    Command="{Binding RentzClicked}"
+                    IsVisible="{Binding CurrentPlayerRentzView}"                    
+                    Clicked="RentzButton_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Text="Rentz"                
+                    FontSize="Small" FontAttributes="Bold" Margin="1" 
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    BackgroundColor="White"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+            <Button
+                    Command="{Binding WhistClicked}"
+                    IsVisible="{Binding CurrentPlayerWhistView}"
+                    Clicked="WhistButton_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="Whist"
+                    FontSize="Small" FontAttributes="Bold" Margin="1"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    BackgroundColor="White"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+            <ImageButton
+                    Command="{Binding DiamondsClicked}"
+                    Source ="{Binding DiamondsSource}"
+                    IsVisible="{Binding CurrentPlayerDiamondsView}"
+                    Clicked="DiamondsButton_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    BackgroundColor="White"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+
+            <Button
+                    Command="{Binding LevateClicked}"
+                    IsVisible="{Binding CurrentPlayerLevateView}"
+                    Clicked="LevateButton_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Text="Levate"
+                    BackgroundColor="White"
+                    FontSize="Small" FontAttributes="Bold" Margin="1"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

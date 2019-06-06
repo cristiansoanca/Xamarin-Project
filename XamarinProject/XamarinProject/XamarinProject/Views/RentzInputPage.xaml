@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XamarinProject.Views.RentzInputPage"
+             BackgroundColor="Black">
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center"
+                     VerticalOptions="Center" >
+            <Button
+                    Command="{Binding SaveResultsClicked}"
+                    Clicked="Button_Clicked"
+                    FontSize="Small" FontAttributes="Bold"
+                    Margin="1"
+                    BackgroundColor="Gray"
+                    Text="Save Results" />
+            <Label 
+                    Text="{Binding CurrentGame}"
+                    BackgroundColor="DarkGray"  
+                    HorizontalTextAlignment="Center"
+                    FontSize="Small" FontAttributes="Bold"
+                    VerticalTextAlignment="Center" 
+                    Margin="1"/>
+
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <Label 
+                       WidthRequest="98.5"
+                       Text="{Binding CurrentGame}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Label 
+                       WidthRequest="43.5"
+                       Text="1"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Label 
+                       WidthRequest="43.5"
+                       Text="2"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Label 
+                       WidthRequest="43.5"
+                       Text="3"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Label 
+                       WidthRequest="43.5"
+                       Text="4"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Label 
+                       IsVisible="{Binding HiddenPlayer5}"
+                       WidthRequest="43.5"
+                       Text="5"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Label
+                       IsVisible="{Binding HiddenPlayer6}"
+                    
+                       WidthRequest="43.5"
+                       Text="6"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                       WidthRequest="100"
+                       Text="{Binding Player1}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Switch IsToggled="{Binding Player1Input1}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch1_Toggled1"/>
+                <Switch IsToggled="{Binding Player1Input2}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch1_Toggled2"/>
+                <Switch IsToggled="{Binding Player1Input3}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch1_Toggled3"/>
+                <Switch IsToggled="{Binding Player1Input4}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch1_Toggled4"/>
+                <Switch IsToggled="{Binding Player1Input5}"
+                        IsVisible="{Binding HiddenPlayer5}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch1_Toggled5"/>
+                <Switch IsToggled="{Binding Player1Input6}"
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch1_Toggled6"/>
+                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                    WidthRequest="100"
+                       Text="{Binding Player2}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Switch IsToggled="{Binding Player2Input1}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch2_Toggled1"/>
+                <Switch IsToggled="{Binding Player2Input2}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch2_Toggled2"/>
+                <Switch IsToggled="{Binding Player2Input3}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch2_Toggled3"/>
+                <Switch IsToggled="{Binding Player2Input4}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch2_Toggled4"/>
+                <Switch IsToggled="{Binding Player2Input5}"
+                        IsVisible="{Binding HiddenPlayer5}"                         
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch2_Toggled5"/>
+                <Switch IsToggled="{Binding Player2Input6}"
+                        IsVisible="{Binding HiddenPlayer6}"                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch2_Toggled6"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                       WidthRequest="100"
+                       Text="{Binding Player3}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Switch IsToggled="{Binding Player3Input1}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch3_Toggled1"/>
+                <Switch IsToggled="{Binding Player3Input2}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch3_Toggled2"/>
+                <Switch IsToggled="{Binding Player3Input3}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch3_Toggled3"/>
+                <Switch IsToggled="{Binding Player3Input4}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch3_Toggled4"/>
+                <Switch IsToggled="{Binding Player3Input5}"
+                        IsVisible="{Binding HiddenPlayer5}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch3_Toggled5"/>
+                <Switch IsToggled="{Binding Player3Input6}"
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch3_Toggled6"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                    WidthRequest="100"
+                       Text="{Binding Player4}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Switch IsToggled="{Binding Player4Input1}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch4_Toggled1"/>
+                <Switch IsToggled="{Binding Player4Input2}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch4_Toggled2"/>
+                <Switch IsToggled="{Binding Player4Input3}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch4_Toggled3"/>
+                <Switch IsToggled="{Binding Player4Input4}"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch4_Toggled4"/>
+                <Switch IsToggled="{Binding Player4Input5}"
+                        IsVisible="{Binding HiddenPlayer5}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch4_Toggled5"/>
+                <Switch IsToggled="{Binding Player4Input6}"
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch4_Toggled6"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                      WidthRequest="100"
+                       IsVisible="{Binding HiddenPlayer5}"
+                       Text="{Binding Player5}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Switch IsToggled="{Binding Player5Input1}"
+                        IsVisible="{Binding HiddenPlayer5}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch5_Toggled1"/>
+                <Switch IsToggled="{Binding Player5Input2}"
+                        IsVisible="{Binding HiddenPlayer5}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch5_Toggled2"/>
+                <Switch IsToggled="{Binding Player5Input3}"
+                        IsVisible="{Binding HiddenPlayer5}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch5_Toggled3"/>
+                <Switch IsToggled="{Binding Player5Input4}"
+                        IsVisible="{Binding HiddenPlayer5}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch5_Toggled4"/>
+                <Switch IsToggled="{Binding Player5Input5}"
+                        IsVisible="{Binding HiddenPlayer5}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch5_Toggled5"/>
+                <Switch IsToggled="{Binding Player5Input6}"                        
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch5_Toggled6"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                    WidthRequest="100"
+                       IsVisible="{Binding HiddenPlayer6}"
+                    
+                       Text="{Binding Player6}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Switch IsToggled="{Binding Player6Input1}"
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch6_Toggled1"/>
+                <Switch IsToggled="{Binding Player6Input2}"
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch6_Toggled2"/>
+                <Switch IsToggled="{Binding Player6Input3}"
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch6_Toggled3"/>
+                <Switch IsToggled="{Binding Player6Input4}"
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch6_Toggled4"/>
+                <Switch IsToggled="{Binding Player6Input5}"
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch6_Toggled5"/>
+                <Switch IsToggled="{Binding Player6Input6}"
+                        IsVisible="{Binding HiddenPlayer6}"
+                        
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        WidthRequest="45"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Toggled="Switch6_Toggled6"/>
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+  
+</ContentPage>

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XamarinProject.Views.InputPage"
+             BackgroundColor="Black">
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center"
+                     VerticalOptions="Center" >
+            <Button
+                    Command="{Binding SaveResultsClicked}"
+                    Clicked="Button_Clicked"
+                    FontSize="Small" FontAttributes="Bold"
+                    Margin="1"
+                    BackgroundColor="Gray"
+                    Text="Save Results" />
+
+            <Label 
+                       WidthRequest="215"
+                       Text="{Binding CurrentGame}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                       WidthRequest="150"
+                       Text="{Binding Player1}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Entry
+                       Text="{Binding Player1Input}"
+                       HeightRequest="40"
+                       WidthRequest="60"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="White"
+                       Keyboard="Numeric" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                    WidthRequest="150"
+                       Text="{Binding Player2}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Entry
+                       Text="{Binding Player2Input}"
+                       HeightRequest="40"
+                       WidthRequest="60"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       BackgroundColor="White"
+                       HorizontalTextAlignment="Center"
+                       Keyboard="Numeric" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                       WidthRequest="150"
+                       Text="{Binding Player3}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Entry
+                       Text="{Binding Player3Input}"
+                       HeightRequest="40"
+                       WidthRequest="60"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       BackgroundColor="White"
+                       HorizontalTextAlignment="Center"
+                       Keyboard="Numeric" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                    WidthRequest="150"
+                       Text="{Binding Player4}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Entry
+                       Text="{Binding Player4Input}"
+                       HeightRequest="40"
+                       WidthRequest="60"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       BackgroundColor="White"
+                       HorizontalTextAlignment="Center"
+                       Keyboard="Numeric" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                       WidthRequest="150"
+                       IsVisible="{Binding HiddenPlayer5}"
+                       Text="{Binding Player5}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Entry
+                       Text="{Binding Player5Input}"
+                       HeightRequest="40"
+                       WidthRequest="60"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       IsVisible="{Binding HiddenPlayer5}"
+                       BackgroundColor="White"
+                       HorizontalTextAlignment="Center"
+                       Keyboard="Numeric" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" >
+                <Label 
+                    WidthRequest="150"
+                       IsVisible="{Binding HiddenPlayer6}"
+                       Text="{Binding Player6}"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Entry
+                       Text="{Binding Player6Input}"
+                       HeightRequest="40"
+                       WidthRequest="60"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       IsVisible="{Binding HiddenPlayer6}"
+                       BackgroundColor="White"
+                       HorizontalTextAlignment="Center"
+                       Keyboard="Numeric" />
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

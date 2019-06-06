@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinProject.Views.MainPage"
+             BackgroundColor="Black">
+
+    <ContentPage.Content>
+
+        <ListView ItemsSource="{Binding Items}"
+                  HasUnevenRows="True"
+                  CachingStrategy="RecycleElement"
+                  SelectionMode="None">
+            <ListView.Header>
+                <Grid RowSpacing="0" ColumnSpacing="0" Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label Text="{Binding CurrentPlayer}" HeightRequest="40" Grid.Row="0" BackgroundColor="DarkGray" HorizontalOptions="Fill"  Grid.Column="0"  FontSize="Small" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="1"/>
+
+                    <Button Text="Select Game"
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="Gray"
+                            HeightRequest="40"
+                            FontSize="Micro" FontAttributes="Bold"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Command="{Binding SelectGameClicked}" />
+                    
+                    <Label Text="Players:" HeightRequest="40" Grid.Row="1" BackgroundColor="DarkGray" HorizontalOptions="Fill"  Grid.Column="0"  FontSize="Small" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="{Binding Player1}" Grid.Row="1" HeightRequest="40" BackgroundColor="DarkGray"  HorizontalOptions="FillAndExpand"  Grid.Column="1"  FontSize="Small" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="{Binding Player2}" Grid.Row="1"  HeightRequest="40" BackgroundColor="DarkGray"  HorizontalOptions="FillAndExpand"  Grid.Column="2"  FontSize="Small" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="{Binding Player3}" Grid.Row="1"  HeightRequest="40" BackgroundColor="DarkGray"  HorizontalOptions="FillAndExpand"  Grid.Column="3"  FontSize="Small" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="{Binding Player4}" Grid.Row="1"  HeightRequest="40" BackgroundColor="DarkGray"  HorizontalOptions="FillAndExpand"  Grid.Column="4"  FontSize="Small" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="1"/>
+
+                </Grid>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell IsEnabled="False">
+                        <Grid  RowSpacing="0" ColumnSpacing="0" Padding="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text ="{Binding CurrentGame}" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="1" Text ="{Binding Player1Score}" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="2" Text ="{Binding Player2Score}" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="3" Text ="{Binding Player3Score}" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="4" Text ="{Binding Player4Score}" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray" HorizontalTextAlignment="Center" Margin="1"></Label>
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+        </ListView>
+
+
+
+
+    </ContentPage.Content>
+
+</ContentPage>

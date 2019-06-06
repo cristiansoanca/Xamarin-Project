@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XamarinProject.Views.StartPage"
+             BackgroundColor="Black">
+
+    <ContentPage.Content>
+        
+            <StackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center">
+
+                <Picker 
+                    SelectedIndex="{Binding CurrentSelectedIndex}"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    BackgroundColor="Gray"
+                    Title="Number of players" >
+                    <Picker.Items>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                    </Picker.Items>
+                </Picker>
+            <ScrollView VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                <StackLayout VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand">
+                    <Entry Text="{Binding Player1}"
+                           Placeholder="Player 1"
+                           WidthRequest="300"
+                           BackgroundColor="White"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center" />
+                    <Entry Text="{Binding Player2}"
+                           Placeholder="Player 2"
+                           WidthRequest="300"
+                           BackgroundColor="White"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center" />
+                    <Entry Text="{Binding Player3}"
+                           Placeholder="Player 3"
+                           WidthRequest="300"
+                           BackgroundColor="White"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center" />
+                    <Entry Text="{Binding Player4}"
+                           Placeholder="Player 4"
+                           WidthRequest="300"                           
+                           BackgroundColor="White"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center" />
+                    <Entry Text="{Binding Player5}"
+                           Placeholder="Player 5"
+                           WidthRequest="300"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center"                           
+                           BackgroundColor="White"
+                           IsVisible="{Binding HiddenPlayer5}"/>
+                    <Entry Text="{Binding Player6}"
+                           Placeholder="Player 6"
+                           WidthRequest="300"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center"
+                           BackgroundColor="White"
+                           IsVisible="{Binding HiddenPlayer6}"/>
+                </StackLayout>
+            </ScrollView>
+
+            <Button 
+                    Text="Start"
+                    WidthRequest="100"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    BackgroundColor="Gray"
+                    Command="{Binding StartClicked}" />
+            </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
