@@ -7,7 +7,8 @@
              BackgroundColor="Black">
 
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView HorizontalOptions="Center"
+                     VerticalOptions="Center">
 
             <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Center" >
